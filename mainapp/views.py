@@ -1,10 +1,16 @@
 from django.shortcuts import render
 
+from mainapp.models import Product
+
+
 def index(request):
     title = 'Главная'
 
+    prods = Product.objects.all()[:4]
+
     context = {
         'title': title,
+        'products': prods,
     }
 
 
