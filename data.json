@@ -1,0 +1,94 @@
+[
+  {
+    "model": "mainapp.category",
+    "pk": 1,
+    "fields": {
+      "name": "Джинсы",
+      "description": "Покупайте наши Джинсы"
+    }
+  },
+  {
+    "model": "mainapp.category",
+    "pk": 2,
+    "fields": {
+      "name": "Кеды",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.category",
+    "pk": 3,
+    "fields": {
+      "name": "Сумки",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.category",
+    "pk": 4,
+    "fields": {
+      "name": "Куртки",
+      "description": "Очень теплые куртки"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "catehory": 1,
+      "name": "синие джинсы",
+      "image": "product_images/big-03.jpg",
+      "short_description": "",
+      "description": "",
+      "price": "2999.99",
+      "quantity": 0,
+      "created": "2025-05-06T13:14:00.708Z",
+      "updated": "2025-05-08T12:49:59.881Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "catehory": 3,
+      "name": "розовая сумка",
+      "image": "product_images/item-05.jpg",
+      "short_description": "",
+      "description": "",
+      "price": "5999.99",
+      "quantity": 4,
+      "created": "2025-05-06T13:14:48.548Z",
+      "updated": "2025-05-08T12:48:30.382Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "catehory": 2,
+      "name": "красные кеды",
+      "image": "product_images/item-06.jpg",
+      "short_description": "",
+      "description": "",
+      "price": "5000.00",
+      "quantity": 5,
+      "created": "2025-05-06T13:15:11.163Z",
+      "updated": "2025-05-08T12:48:14.022Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "catehory": 4,
+      "name": "синий крутка",
+      "image": "",
+      "short_description": "теплая крутка",
+      "description": "",
+      "price": "14999.99",
+      "quantity": 6,
+      "created": "2025-05-08T12:53:33.580Z",
+      "updated": "2025-05-08T13:12:23.442Z"
+    }
+  }
+]
