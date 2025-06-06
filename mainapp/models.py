@@ -3,7 +3,7 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(
-        max_length=100,
+        max_length=64,
         unique=True,
         verbose_name='Имя',
     )
@@ -22,10 +22,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    catehory = models.ForeignKey(
+    category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
-        verbose_name='Категория'
+        verbose_name='Категория',
     )
 
     name = models.CharField(
@@ -34,7 +34,7 @@ class Product(models.Model):
     )
 
     image = models.ImageField(
-        verbose_name="Изображение",
+        verbose_name='Изображение',
         blank=True,
         upload_to='product_images',
     )
@@ -45,7 +45,7 @@ class Product(models.Model):
         blank=True,
     )
 
-    description = models.CharField(
+    description = models.TextField(
         verbose_name='Описание',
         blank=True,
     )
@@ -58,7 +58,7 @@ class Product(models.Model):
     )
 
     quantity = models.PositiveIntegerField(
-        verbose_name='Количество товаров',
+        verbose_name='Количество товара',
         default=0,
     )
 
@@ -76,4 +76,3 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
-

@@ -27,11 +27,11 @@
             <div class="product-slider">
               <div id="slider" class="flexslider">
                     {% if product.image %}
-                        <img src="{{ product.image.url }}"
-                             alt="{{ product.name }}">
+                      <img src="{{ product.image.url }}"
+                           alt="{{ product.name }}">
                     {% else %}
                         <img src="{% static 'assets/images/default.png' %}"
-                             alt="нет изображения">
+                           alt="нет изображения">
                     {% endif %}
               </div>
             </div>
@@ -69,11 +69,9 @@
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
 
-              {% for product in products %}
-
+                {% for product in products %}
                     <a href="{% url 'mainapp:product' product.pk %}">
                         <div class="featured-item">
-
                             {% if product.image %}
                               <img src="{{ product.image.url }}"
                                    alt="{{ product.name }}">
@@ -86,17 +84,15 @@
                           <h6>{{ product.price }} тг.</h6>
                         </div>
                     </a>
-
-              {% endfor %}
+                {% endfor %}
 
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- Similar Ends Here -->
 {% endblock %}
-
 
 {% block js %}
     <script src="{% static 'assets/js/isotope.js' %}"></script>
