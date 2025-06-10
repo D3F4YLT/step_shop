@@ -39,14 +39,27 @@
             <span>{{ temp }}</span>
             {% endif %}
 
-            <span>
+            <span class="buttons">
                 {% if user.is_authenticated %}
+                    <a href="/admin/"
+                       class="btn btn-light btn-sm mx-3">
+                            Админка
+                    </a>
+
+
                     <a href="{% url 'auth:edit' %}"
                        class="btn btn-light btn-sm">
                             {{ user.username|title }}
                     </a>
                     <a href="{% url 'auth:logout' %}"
                        class="btn btn-light btn-sm mx-3">Выйти</a>
+
+                    {% if basket %}
+                      <a href="#" class="basket mx-3">
+                        <span>{{ basket|length }}</span>
+                      </a>
+                    {% endif %}
+
                 {% else %}
                     <a href="{% url 'auth:login' %}"
                        class="btn btn-light btn-sm mx-3">Войти</a>
