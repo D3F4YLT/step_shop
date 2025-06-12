@@ -11,6 +11,6 @@ def get_main_menu(current='mainapp:index'):
 
 
 def get_basket(user=None):
-    if user:
+    if user and user.is_authenticated:
             return Basket.objects.filter(user=user)
     return None
