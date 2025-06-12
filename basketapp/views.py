@@ -3,13 +3,14 @@ from django.shortcuts import render, get_object_or_404
 
 from basketapp.models import Basket
 from mainapp.models import Product
+from mainapp.utils import get_main_menu, get_basket
 
 
 def basket(request):
     if request.user.is_authenticated:
-        basket_ = Basket.objects.filter(user=request.user)
         context = {
-            'basket_': basket_,
+            'basket': get_basket(request.user),
+            'menu_links': get_main_menu(),
         }
         return render(request, 'basketapp/basket.html', context)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
